@@ -147,61 +147,143 @@ Une liste de ce type :
                             conclusion 
                         </li>
                     </ul>
+                </main>
+            </article>
+            <article>
+                <header>
+                    <h2>Les tableaux HTML</h2>
+                </header>
+                <main>
                     <p>
-                        C'est le chemin vers le document à partir de la page sur laquelle se trouve le lien.
+                        Les tableaux sont créés en encapsulant des balises dans un ordre précis.
+                        Ces balises définissent :
                     </p>
+                    <ul>
+                        <li>Le cadre du tableau (table)</li>
+                        <li>l'entête du tableau (thead)</li>
+                        <li>le corps du tableau (tbody)</li>
+                        <li>le pied du tableau (tfoot)</li>
+                        <li>Chacune de ces parties est composé de lignes (tr)</li>
+                        <li>Dans ces lignes, on y ajoute des cellules (th ou td)</li>
+                        <li>th => cellule représentant un entête</li>
+                        <li>td => cellule représentant une cellule du tableau (résultats)</li>
+                    </ul>
                     <p>
-                        <a href="./frame/frame.html">Le dossier "frame"</a>
+                        Un tableau ne s'écrit pas dans un paragraphe.
                     </p>
-                    <p>
-                        href peut aussi contenir l'identifiant d'un élément de la même page, en cliquant sur le lien on ammène en haut de l'affichage l'élément identifié, cela est souvent utilisé pour créer une table des matières en début d'un long document.
-                    </p>
-                    <p>
-                        <a href="#top">
-                            Remonter en haut de page
-                        </a>
-                    </p>
-                    <h3>
-                        Cible où sera ouverte le document ciblé : target
-                    </h3>
-                    <p>
-                        target défini la cible d'ouverture du document ciblé. la cible est un cadre (frame)
-                    </p>
-                    <p>
-                        Par exemple, _self (configuration par defaut), fait ouvrir dans le cadre actuel, _blank ouvre la page dans un nouvel onglet, _parent : ouvre le lien dans un cadre parent, _top : ouvre la page dans le cadre "le plus haut".
-                    </p>
-                    <p>
-                        <a href="./index.html" target="_parent">ouvrir l'accueil dans le cadre parent</a>
-                    </p>
-                    <p>
-                        <a href="./frame/frameset.html">Ouvrir les frameset</a>
-                    </p>
-                    <iframe src="./frame/frame.html" width="50%" height="200"></iframe>
-
-                    <p>
-                        <a href="./documents/PP3.pdf" target="documents">PP3</a>
-                    </p>
-                    <p>
-                        <a href="./documents/uxpin_web_ui_design_for_the_human_eye_1.pdf" target="documents">UX PIN</a>
-                    </p>
-                    <p>
-                        <a href="./media/audio/diablo_town.mp3" target="documents">Diablo town</a>
-                    </p>
-                    <iframe name="documents" src="./documents/uxpin_web_ui_design_for_the_human_eye_1.pdf" width="50%" height="300"></iframe>
-                    <h3>
-                        Les attributs de lien
-                    </h3>
-                    <p>
-                        <a href="mailto:nduflot@dawan.fr?subject=le site il est nul&cc=toto@tata.fr" title="Mail à l'admin du site">
-                            Envoyez un email à l'admin
-                        </a>
-                    </p>
-                    <p>
-                        <a href="tel:0123456789" title="Appelez-nous">Nous appeler ?</a>
-                    </p>
-                    <a href="./images/mon-petit-poney.png" target="_blank" title="voir l'image mon petit poney dans un nouvel onglet">
-                        <img src="./images/mon-petit-poney.png" width="100" alt="Mon petit poney tout rose" />
-                    </a>
+                    <table border="1" cellspacing="0" cellpadding="5">
+                        <thead>
+                            <tr>
+                                <th>Col 1</th>
+                                <th>Col 2</th>
+                                <th>Col 3</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>C 1</td>
+                                <td>C 2</td>
+                                <td>C 3</td>
+                            </tr>
+                            <tr>
+                                <td>C 4</td>
+                                <td>C 5</td>
+                                <td>C 6</td>
+                            </tr>
+                            <tr>
+                                <td>C 7</td>
+                                <td>C 8</td>
+                                <td>C 9</td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <th>Col 1</th>
+                                <th>Col 2</th>
+                                <th>Col 3</th>
+                            </tr>
+                        </tfoot>
+                    </table>
+                    <h3>Autre exemple de tableau</h3>
+                    <table width="300" border="1" cellspacing="0">
+                        <thead>
+                            <tr>
+                                <th>Poids / Tailles</th>
+                                <th>180 cm</th>
+                                <th>240 cm</th>
+                                <th>320 cm</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>100 kg</th>
+                                <td>100 &euro;</td>
+                                <td>150 &euro;</td>
+                                <td>200 &euro;</td>
+                            </tr>
+                            <tr>
+                                <th>150 kg</th>
+                                <td>150 &euro;</td>
+                                <td>200 &euro;</td>
+                                <td>250 &euro;</td>
+                            </tr>
+                            <tr>
+                                <th>200 kg</th>
+                                <td>200 &euro;</td>
+                                <td>250 &euro;</td>
+                                <td>300 &euro;</td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <th>Poids / Tailles</th>
+                                <th>180 cm</th>
+                                <th>240 cm</th>
+                                <th>320 cm</th>
+                            </tr>
+                        </tfoot>
+                    </table>
+                    <h3>Les "fusions" de cellule des tableaux</h3>
+                    <table border="1" cellspacing="0" cellpadding="5">
+                        <thead>
+                            <tr>
+                                <th>Col 1</th>
+                                <th>Col 2</th>
+                                <th>Col 3</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td colspan="2">C 1</td>
+                                <td>C 2</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="2">C 4</td>
+                                <td>C 5</td>
+                                <td>C 6</td>
+                            </tr>
+                            <tr>
+                                <td>C 7</td>
+                                <td>C 8</td>
+                            </tr>
+                            <tr>
+                                <td colspan="2" rowspan="2">C 10</td>
+                                <td>C 11</td>
+                            </tr>
+                            <tr>
+                                <td>C 13</td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <th>Col 1</th>
+                                <th>Col 2</th>
+                                <th>Col 3</th>
+                            </tr>
+                        </tfoot>
+                    </table>
+                    <h2>Les media</h2>
+                    <h3>Les vidéos hébergées par le site</h3>
                 </main>
             </article>
         </section>

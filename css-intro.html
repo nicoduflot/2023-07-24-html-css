@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Le site fait avec le formateur pour la formation HTML - CSS Initiation" />
+    <title>Formation HTML CSS - Les liens</title>
+    <link rel="stylesheet" href="./css/style.css" media="screen" />
+</head>
+<body id="top">
+    <header>
+        <h1>Formation HTML CSS</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="./" target="_self" title="Lien vers la page d'accueil">Accueil</a></li>
+            <li><a href="./liens.html" target="_self" title="Les liens internet">Les liens</a></li>
+            <li><a href="./autres-balises.html" target="_self" title="Lien vers autres balises">Autres balises</a></li>
+            <li><a href="./css-intro.html" target="_self" title="lien vers l'intro CSS">CSS Intro</a></li>
+            <li><a href="./formulaire.html" target="_self" title="lien vers les formulaire">Formulaires</a></li>
+        </ul>
+    </nav>
+    <aside>
+        <nav>
+            <h3>Calendrier</h3>
+            <ul>
+                <li><a href="#" target="_self" title="test">lien Calendrier</a></li>
+                <li><a href="#" target="_self" title="test">lien Calendrier</a></li>
+                <li><a href="#" target="_self" title="test">lien Calendrier</a></li>
+                <li><a href="#" target="_self" title="test">lien Calendrier</a></li>
+                <li><a href="#" target="_self" title="test">lien Calendrier</a></li>
+            </ul>
+        </nav>
+    </aside>
+    <main>
+        <section>
+            <article>
+                <header>
+                    <h2>
+                        CSS Intro
+                    </h2>
+                </header>
+                <main>
+                    <h3>CSS : Cascading Style Sheets</h3>
+                    <p>
+                        Feuilles de style en cascade.
+                    </p>
+                    <p style="color: red;">
+                        La pire façon de faire du CSS
+                    </p>
+                    <p id="exempleMoinsPire">
+                        La moins pire façon de faire du CSS pour une page web,
+                        adapté le plus souvent pour du HTML utilisé pour l'emailling.
+                    </p>
+                    <p class="rouge-gras">
+                        La "meilleure" (hors landing page et newsletter) façon de faire du CSS, c'est d'écrire le style sur un fichier à part, que l'on liera sur toutes les pages du site.
+                    </p>
+                    <h3>Les sélecteurs</h3>
+                    <p>
+                        Les sélecteurs permettent de sélectionner le ou les éléments qui vont appliquer les 
+                        règles CSS, il en existe plusieurs :
+                    </p>
+                    <ul>
+                        <li>Sélection par balise : le nom d'une balise</li>
+                        <li>Sélection par id : un élément possédant un id peut être sélectionné</li>
+                        <li>Sélection par classe : un élément contenant la classe</li>
+                        <li>Sélection en cascade : une suite des précédent sélecteurs pour appliquer les règles 
+                            sur des éléments ou des groupes d'éléments particuliers
+                        </li>
+                    </ul>
+                    <h3>Exemple de sélecteurs</h3>
+                    <p>
+                        Un sélecteur pour agir sur tous les paragraphes
+                    </p>
+                    <pre>
+p{
+    color: black;
+}
+                    </pre>
+                    <p>
+                        Un sélecteur pour agir sur un élément ayant l'id testId
+                    </p>
+                    <pre>
+#testId{
+    color: black;
+}
+                    </pre>
+                    <p>
+                        Un sélecteur pour agir sur un élément ayant la classe bilbo
+                    </p>
+                    <pre>
+.bilbo{
+    color: black;
+}
+                    </pre>
+                    <p>
+                        On peu combiner les sélecteurs.
+                        Un sélecteur pour agir sur un élément paragraphe ayant la classe bilbo
+                    </p>
+                    <pre>
+p.bilbo{
+    color: black;
+}
+                    </pre>
+                    <p>
+                        On peut identifier des éléments à l'intérieur d'autres élément.
+                        Un sélecteur pour agir sur un élément li à l'intérieur d'article
+                    </p>
+                    <pre>
+article li{
+    color: black;
+}
+                    </pre>
+                    <p>
+                        On peut identifier des éléments enfants direct d'autres élément.
+                        Un sélecteur pour agir sur un élément li enfant direct d'un ul et d'un main
+                    </p>
+                    <pre>
+main > ul > li{
+    color: black;
+}
+                    </pre>
+                    <p>
+                        Plusieurs sélecteurs pour une règles de style.
+                        Un style appliqué aux élément paragraphe, li et h2.
+                    </p>
+                    <pre>
+p, li, h2{
+    color: black;
+}
+                    </pre>
+                    <h2>Les dimenssions en CSS</h2>
+                    <p>
+                        ATTENTION /!\
+                    </p>
+                    <p>
+                        Par défaut, les tailles des boîtes représentants les éléments html sont intérprétées par le contenu, elle ne prennent pas en compte la largeur des bordures et les marges intérieurs.
+                    </p>
+                    <p>
+                        Il faut utiliser le sélecteur général * (qui impacte TOUS les éléments de la page) et préciser que le calcul des tailles de boiîtes se fasse depuis l'extérieur des bordure, incluant donc la largeur de celles-ci et les marge intérieures.
+                    </p>
+                    <div class="carre">
+
+                    </div>
+                    <pre>
+*{
+    box-sizing: border-box;
+}
+                    </pre>
+                    <h3>Les unités de mesures les plus utilisés</h3>
+                    <ul>
+                        <li>
+                            px => pixel (généralement utilisé pour les largeur et hauter d'éléments, déconseillé pour les polices de caractère)
+                        </li>
+                        <li>
+                            % => la taille de l'élément est calculée par rapport àl'espace disponible, donnée par l'élément parent
+                        </li>
+                        <li>
+                            em => cadratin (la taille de l'élément est fixé par raaport à la taille du parent)
+                        </li>
+                        <li>
+                            rem => cadratin racine (la taille est calculée par rapport à la base de référence)
+                        </li>
+                    </ul>
+                    <p>
+                        Rincevent
+                    </p>
+                    <p class="a2em">
+                        Rincevent<br/>
+                        <span class="a2em">
+                            Rincevent
+                        </span>
+                    </p>
+                    <p class="a2rem">
+                        Rincevent<br/>
+                        <span class="a2rem">
+                            Rincevent
+                        </span>
+                    </p>
+                    <h2>Les couleurs avec HTML et CSS</h2>
+                    <p>
+                        Il est possible de représenter les couleurs en CSS de multiples manières.
+                    </p>
+                    <ul>
+                        <li>hexadécimal => #00ff00 => 0 255 0 </li>
+                        <li>le nom de la couleur en anglais => green => #00ff00</li>
+                        <li>rgb => rgb(0, 255, 0) => vert => #00ff00</li>
+                        <li>rgba => rgba(0, 255, 0, 0.5) => vert à 50% de transparence</li>
+                    </ul>
+                    <div class="big-box">
+                        <div class="carre5050">
+                            <b>AA</b>
+                        </div>
+                        <div class="carre500100">
+                            <p>
+                                <b>Coucou</b>
+                            </p>
+                        </div>
+                    </div>
+                    <h3>Les positions</h3>
+                    <div class="big-box relative">
+                        <div class="rouge5050"></div><div class="vert5050"></div>
+                    </div>
+                    <h2>Quelques règles CSS en application</h2>
+                    <p class="toutEnMajuscule drapeau200">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque sit voluptas ad, animi, maxime voluptate enim velit voluptatum corporis inventore, possimus unde quis ullam fugiat accusantium iure. Architecto, facilis cupiditate!
+                    </p>
+                    <ul>
+                        <li>Élément</li>
+                        <li>Élément</li>
+                        <li>Élément</li>
+                        <li>Élément</li>
+                        <li>Élément</li>
+                        <li>Élément</li>
+                    </ul>
+                </main>
+            </article>
+        </section>
+    </main>
+    <footer>
+        <p>
+            &copy; DAWAN - JUL 2023 
+        </p>
+    </footer>
+</body>
+</html>

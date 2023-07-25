@@ -1,0 +1,135 @@
+/* déclarations générales */
+/* 
+la déclaration à la racine permet de définir des éléments avant la feuille de style du navigateur.
+*/
+:root{
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.7rem;
+    font-size: 1.2rem;
+}
+
+/*
+le selecteur * veux dire : n'importe quel élément de la page
+*/
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+}
+
+article{
+    padding: 0 1rem;
+}
+
+h1{
+    margin: 0;
+}
+
+h2, h3, h4, h5, h6{
+    color: darkred;
+}
+
+/* déclaration de classes */
+
+.rouge-gras{
+    font-weight: bold;
+    color: red;
+}
+
+p.bilbo{
+    font-family:'Times New Roman', Times, serif
+}
+
+.bilbo{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.a2em{
+    font-size: 2em;
+}
+
+.a2rem{
+    font-size: 2rem;
+}
+
+.big-box{
+    height: 400px;
+    width: 400px;
+    border: 1px solid black;
+    position: relative;
+}
+
+.carre5050{
+    width: 50px;
+    height: 50px;
+    background-color: red;
+    position: absolute;
+    left: 5px;
+    top: 55px;
+}
+
+.carre500100{
+    width: 300px;
+    height: 100px;
+    background-color: rgba(0, 128, 0, 0.468);
+    position: absolute;
+}
+
+#toTop{
+    width: 50px;
+    height: 50px;
+    background-color: rgba(0, 0, 0, 0.5);
+    font-size: 0.8rem;
+    position: fixed;
+    right: 50px;
+    bottom: 50px;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.toutEnMajuscule{
+    text-transform: uppercase;
+}
+
+.drapeau300{
+    width: 300px;
+    text-align: justify;
+    text-align-last: center;
+}
+
+#listeCustom{
+    list-style-type:none;
+}
+
+#listeCustom li::before{
+    content: ">";
+    border: 5px solid transparent;
+    border-left-width: 10px;
+    border-left-color: red;
+    width: 0;
+    height: 0;
+}
+
+/* déclaration de structure */
+
+body > header{
+    background-color: rgb(0, 0, 0);
+    color: white;
+    padding: 2rem 1rem;
+}
+
+article li{
+    font-weight: normal;
+}
+
+article > main > ul > li{
+    font-weight: bold;
+}
+
+header h2{
+    margin: 0;
+}

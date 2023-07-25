@@ -37,27 +37,87 @@
             <article>
                 <header>
                     <h2>
-                        Les liens hypertextes                        
+                        Images et légendes
                     </h2>
                 </header>
                 <main>
-                    <h3>
-                        L'anatomie d'un lien
-                    </h3>
                     <p>
-                        On crée un lien en utilisant la balise a (anchor => ancre). Cette balise a besoin d'attributs pour fonctionner correctement. Ces attributs définissent :
+                        Quand on n'indique aucune largeur ou hauteur à une image, le navigateur affiche l'image 
+                        à 100% de la hauteur et largeur.
+                        Si on défini une hauteur et une largeur mais que l'on ne respecte pas l'homothétie (rapport 
+                        hauteur / largeur de l'image à 100%) elle apparaîtra déformée. Il faut soit calculer 
+                        la bonne hauteur par rapport à la largeur, soit n'indiquer que la hauteur ou que la 
+                        largeur, le navigateur faisant automatiquement le calcul de l'homohétie.
                     </p>
-                    <ul>
-                        <li>Le document lié (page html, fichier, email, un numéro de téléphone, etc.)</li>
-                        <li>La façon dont on ouvre le document lié (elle-même, un autre onglet, etc.)</li>
-                        <li>Un titre de lien, qui "explique" où mène le lien</li>
-                    </ul>
+                    <figure>
+                        <img src="./images/SheRa-Netflix-2--673x1024.jpg" alt="poster de la série Shera" width="200" />
+                        <figcaption>
+                            Shera saison deux sur netflix.
+                        </figcaption>
+                    </figure>
                     <h3>
-                        Les attributs en détail
+                        Les listes
                     </h3>
                     <h4>
-                        Le chemin vers le document ciblé : href
+                        Les liste non-ordonnées
                     </h4>
+                    <p>
+                        Les listes ne sont pas des éléments de paragraphe, elle sont considérées comme un paragraphe à part entière
+                    </p>
+                    <ul>
+                        <li>Introduction</li>
+                        <li>Première partie</li>
+                        <li>
+                            Deuxième partie
+                            <ul>
+                                <li>
+                                    Sous partie 1
+                                    <ul>
+                                        <li>Sous-sous partie</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    Sous partie 2
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <h4>Les liste ordonnées</h4>
+                    <ol type="I">
+                        <li>Introduction</li>
+                        <li>Première partie</li>
+                        <li>
+                            Deuxième partie
+                            <ol type="a" start="3" reversed>
+                                <li>
+                                    Sous partie 1
+                                    <ol>
+                                        <li>Sous-sous partie</li>
+                                    </ol>
+                                </li>
+                                <li>
+                                    Sous partie 2
+                                </li>
+                            </ol>
+                        </li>
+                    </ol>
+                    <h4>
+                        Exercice
+                    </h4>
+                    <pre>
+Une liste de ce type :
+
+- intro
+- première partie
+    a une sous partie
+    b une sous partie
+    c une sous partie
+        - un exemple
+- deuxième partie
+    1 exemple
+    2 exemple
+- conclusion 
+                        </pre>
                     <p>
                         C'est le chemin vers le document à partir de la page sur laquelle se trouve le lien.
                     </p>

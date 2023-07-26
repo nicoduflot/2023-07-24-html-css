@@ -21,9 +21,10 @@
             <li><a href="./autres-balises.html" target="_self" title="Lien vers autres balises">Autres balises</a></li>
             <li><a href="./css-intro.html" target="_self" title="lien vers l'intro CSS">CSS Intro</a></li>
             <li><a href="./formulaire.html" target="_self" title="lien vers les formulaire">Formulaires</a></li>
+            <li><a href="./emailing.html" target="_self" title="lien vers un exemple mise en page emailin">Emailing</a></li>
         </ul>
     </nav>
-    <aside>
+    <aside id="colonne-info">
         <nav>
             <h3>Calendrier</h3>
             <ul>
@@ -128,14 +129,18 @@
                                 </div>
                             </p>
                             <p>
-                                Type de client :
+                                <label>
+                                    Type de client :
+                                </label>
                             </p>
                             <p>
-                                <input type="radio" name="client" id="client-physique" value="PP" checked /> <label for="client-physique">Personne physique (particulier)</label> <br />
-                                <input type="radio" name="client" id="client-moral" value="PM" /> <label for="client-moral">Personne morale (entreprise)</label>
+                                <input type="radio" name="client" id="client-physique" value="PP" checked /> <label for="client-physique">Particulier</label> <br />
+                                <input type="radio" name="client" id="client-moral" value="PM" /> <label for="client-moral">Entreprise</label>
                             </p>
                             <p>
-                                Format de réponse
+                                <label>
+                                    Format de réponse
+                                </label>
                             </p>
                             <input type="checkbox" name="telephone" id="telephone"> <label for="telephone"> Par téléphone </label><br />
                             <input type="checkbox" name="mail" id="mail"> <label for="mail"> Par email </label><br />

@@ -66,6 +66,7 @@ la déclaration à la racine permet de définir des éléments avant la feuille 
     font-family: Arial, Helvetica, sans-serif;
     line-height: 1.5rem;
     font-size: 1.2rem;
+    --column-width: 200px;
 }
 
 /*
@@ -182,12 +183,23 @@ p.bilbo{
     margin: 2rem;
 }
 
+body#top{
+    display: grid;
+    grid-template-columns: var(--column-width) calc(100% - var(--column-width));
+}
+
 /* déclaration de structure */
 
 body > header{
     background-color: rgb(0, 0, 0);
     color: white;
     padding: 2rem 1rem;
+    width: 100%;
+    grid-column: span 2;
+}
+
+body > nav{
+    grid-column: span 2;
 }
 
 article li{
@@ -200,4 +212,8 @@ article > main > ul > li{
 
 header h2{
     margin: 0;
+}
+
+body > footer{
+    grid-column: span 2;
 }

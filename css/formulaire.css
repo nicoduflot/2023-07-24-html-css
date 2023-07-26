@@ -15,3 +15,33 @@ form fieldset legend{
 .form-help{
     font-size: 0.8rem;
 }
+
+article form{
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+form label, 
+.form-help, 
+input[type="radio"], 
+input[type="checkbox"]{
+    margin-left: 10%;
+}
+
+form label{
+    display: inline-block;
+    width: 200px;
+}
+
+form input[type="text"],
+form input[type="email"],
+form select{
+    line-height: 1.5rem;
+    padding-left: 0.5rem;
+    border-radius: 0.5rem;
+}
+
+form select{
+    height: 1.5rem;
+}

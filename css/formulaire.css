@@ -1,0 +1,17 @@
+form fieldset{
+    border-style: none;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 5px #a0a0a0;
+}
+
+form fieldset legend{
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    border-radius: 0.5rem;
+    background-color: white;
+    box-shadow: 0 0 5px #a0a0a0;
+}
+
+.form-help{
+    font-size: 0.8rem;
+}

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Le site fait avec le formateur pour la formation HTML - CSS Initiation" />
+    <title>Formation HTML CSS - Les liens</title>
+    <link rel="stylesheet" href="./css/style.css" media="screen" />
+    <link rel="stylesheet" href="./css/formulaire.css" media="screen" />
+</head>
+
+<body id="top">
+    <header>
+        <h1>Formation HTML CSS</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="./" target="_self" title="Lien vers la page d'accueil">Accueil</a></li>
+            <li><a href="./liens.html" target="_self" title="Les liens internet">Les liens</a></li>
+            <li><a href="./autres-balises.html" target="_self" title="Lien vers autres balises">Autres balises</a></li>
+            <li><a href="./css-intro.html" target="_self" title="lien vers l'intro CSS">CSS Intro</a></li>
+            <li><a href="./formulaire.html" target="_self" title="lien vers les formulaire">Formulaires</a></li>
+        </ul>
+    </nav>
+    <aside>
+        <nav>
+            <h3>Calendrier</h3>
+            <ul>
+                <li><a href="#" target="_self" title="test">lien Calendrier</a></li>
+                <li><a href="#" target="_self" title="test">lien Calendrier</a></li>
+                <li><a href="#" target="_self" title="test">lien Calendrier</a></li>
+                <li><a href="#" target="_self" title="test">lien Calendrier</a></li>
+                <li><a href="#" target="_self" title="test">lien Calendrier</a></li>
+            </ul>
+        </nav>
+    </aside>
+    <main>
+        <section>
+            <article>
+                <header>
+                    <h2>
+                        Les formulaires
+                    </h2>
+                </header>
+                <main>
+                    <p>
+                        Les formulaires servent à récupérer des informations.
+                    </p>
+                    <h2>Exemple de formulaire et déléments de formulaire</h2>
+                    <p>
+                        un formulaire se déclare avec la balise form. Il possède des attributs, 
+                        les plus important étants la méthode (method) et l'action (action)
+                    </p>
+                    <h3>Method</h3>
+                    <p>
+                        L'attribut method défini la façon dont vont être envoyées les données inscrites dans les 
+                        éléments du formulaire : get et post
+                    </p>
+                    <ul>
+                        <li>
+                            get : les données sont transférées dans l'url selon 
+                            une combinaison ?nomVariable=variable
+                        </li>
+                        <li>
+                            Post : Les données sont envoyées dans l'entête HTTP de la page de traîtement.
+                        </li>
+                    </ul>
+                    <h3>Action</h3>
+                    <p>
+                        Détermine la page de traîtement des données du formulaire
+                    </p>
+                    <h3>Notre formulaire</h3>
+                    <form method="get" action="./formulaire.html">
+                        <fieldset>
+                            <legend>
+                                Civilité
+                            </legend>
+                            <p>
+                                <label for="nom">Nom *</label> 
+                                <input type="text" name="nom" id="nom" required placeholder="Entrez votre nom" autofocus aria-describedby="nom-help" />
+                            </p>
+                            <div class="form-help" id="nom-help">
+                                Votre nom est requis pour la prise de contact ultérieure
+                            </div>
+                            <p>
+                                <label for="prenom">Prénom</label> 
+                                <input type="text" name="prenom" id="prenom" placeholder="Entrez votre prénom" aria-describedby="prenom-help" />
+                            </p>
+                            <div class="form-help" id="prenom-help">
+                                Inscrivez votre prénom
+                            </div>
+                            <p>
+                                <label for="email">Email *</label> 
+                                <input type="email" name="email" id="email" required placeholder="Entrez votre email" aria-describedby="email-help" />
+                            </p>
+                            <div class="form-help" id="prenom-help">
+                                Votre email est requis pour la prise de contact ultérieure
+                            </div>
+                        </fieldset>
+                        <fieldset>
+                            <legend>
+                                Votre demande
+                            </legend>
+                            <p>
+                                <label for="typeDemande">Type de demande</label> 
+                                <select name="typeDemande" id="typeDemande" aria-describedby="typeDemande-help">
+                                    <option value="">Choisir le type de demande dans la liste</option>
+                                    <optgroup label="Produits">
+                                        <option value="devisProduit">
+                                            Demande de devis produit
+                                        </option>
+                                        <option value="infoProduit">
+                                            Demande d'information produit
+                                        </option>
+                                    </optgroup>
+                                    <optgroup label="Prestations">
+                                        <option value="devisPresta">
+                                            Demande de devis prestation
+                                        </option>
+                                        <option value="infoPresta">
+                                            Demande d'information prestation
+                                        </option>
+                                    </optgroup>
+                                </select>
+                                <div class="form-help" id="typeDemande-help">
+                                    Veuillez choisir un type de demande valide.
+                                </div>
+                            </p>
+                            <p>
+                                
+                            </p>
+                        </fieldset>
+                        <p>
+                            <button type="submit" name="envoi" value="okForm">
+                                Soumettre
+                            </button>
+                        </p>
+                    </form>
+                </main>
+            </article>
+        </section>
+    </main>
+    <footer>
+        <p>
+            &copy; DAWAN - JUL 2023
+        </p>
+    </footer>
+    <div id="toTop">
+        <a href="#top">&uarr;</a>
+    </div>
+</body>
+
+</html>
